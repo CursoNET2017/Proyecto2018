@@ -27,6 +27,14 @@ namespace Proyecto2018
             container.RegisterType<IPersonaService, PersonaService>(
               new Interceptor<InterfaceInterceptor>(),
               new InterceptionBehavior<LoggingInterceptionBehavior>());
+            container.RegisterType<IDomiciliosRepository, DomiciliosRepository>();
+            container.RegisterType<IDomiciliosService, DomiciliosService>(
+              new Interceptor<InterfaceInterceptor>(),
+              new InterceptionBehavior<LoggingInterceptionBehavior>());
+            container.RegisterType<ICuentaBancariaRepository, CuentaBancariaRepository>();
+            container.RegisterType<ICuentaBancariaService, CuentaBancariaService>(
+              new Interceptor<InterfaceInterceptor>(),
+              new InterceptionBehavior<LoggingInterceptionBehavior>());
 
             GlobalConfiguration.Configuration.DependencyResolver = new UnityDependencyResolver(container);
         }

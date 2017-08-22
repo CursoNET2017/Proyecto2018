@@ -31,6 +31,8 @@ namespace Proyecto2018.Models
         }
 
         public DbSet<Persona> Personas { get; set; }
+        public DbSet<CuentaBancaria> CuentasBancarias { get; set; }
+        public DbSet<Domicilio> Domicilios { get; set; }
 
         public static ApplicationDbContext Create()
         {
