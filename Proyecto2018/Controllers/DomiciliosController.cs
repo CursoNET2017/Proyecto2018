@@ -5,9 +5,11 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Proyecto2018.Models;
 using Proyecto2018.Service;
+using System.Web.Http.Cors;
 
 namespace Proyecto2018.Controllers
 {
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
     public class DomiciliosController : ApiController
     {
         private IDomiciliosService domiciliosService;

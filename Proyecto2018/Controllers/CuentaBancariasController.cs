@@ -11,10 +11,13 @@ using System.Web.Http.Description;
 using Proyecto2018;
 using Proyecto2018.Models;
 using Proyecto2018.Service;
+using System.Web.Http.Cors;
 
 namespace Proyecto2018.Controllers
 {
-        public class CuentaBancariasController : ApiController
+    [EnableCors(origins: "*", headers: "*", methods: "*")]
+
+    public class CuentaBancariasController : ApiController
         {
             private ICuentaBancariaService cuentaBancariaService;
 
